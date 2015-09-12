@@ -1,0 +1,9 @@
+ipcrm -M 0x610120a2 -S 0x610120a2
+rm -f zzz
+for i in $(seq 1 $1)
+do
+    rm -f zzz
+    echo -e "\e[31mRun number $i\e[0m"
+    echo -e "zzz\n" | ./probSemSharedMemAirportRhapsody
+done
+
